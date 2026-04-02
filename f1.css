@@ -148,9 +148,6 @@ button:hover {
 #mensagem.sucesso { color: #2e7d32; }
 #mensagem.erro    { color: #c62828; }
 
-/* =====================
-   SEÇÃO CLASSIFICAÇÃO
-===================== */
 .section-label {
   max-width: 700px;
   margin: 0 auto 10px;
@@ -188,7 +185,6 @@ button:hover {
   border-width: 1.5px;
 }
 
-/* Medalha de posição */
 .medal {
   width: 34px;
   height: 34px;
