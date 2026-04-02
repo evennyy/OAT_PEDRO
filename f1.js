@@ -1,7 +1,3 @@
-// ============================================================
-// BACK-END: Array como estrutura de dados + localStorage
-// ============================================================
-
 let pilotos = JSON.parse(localStorage.getItem("pilotos")) || [];
 let idAtual  = parseInt(localStorage.getItem("idAtual")) || 1;
 
@@ -10,7 +6,6 @@ function salvarEstado() {
   localStorage.setItem("idAtual", idAtual);
 }
 
-// C - CREATE
 function createPiloto(nome, equipe, pontos) {
   const novo = { id: idAtual++, nome: nome.trim(), equipe: equipe.trim(), pontos: Number(pontos) };
   pilotos.push(novo);
@@ -18,12 +13,10 @@ function createPiloto(nome, equipe, pontos) {
   return novo;
 }
 
-// R - READ
 function readPilotos() {
   return [...pilotos].sort((a, b) => b.pontos - a.pontos);
 }
 
-// U - UPDATE
 function updatePiloto(id, nome, equipe, pontos) {
   const piloto = pilotos.find(p => p.id === id);
   if (!piloto) return false;
@@ -34,17 +27,12 @@ function updatePiloto(id, nome, equipe, pontos) {
   return true;
 }
 
-// D - DELETE
 function deletePiloto(id) {
   const antes = pilotos.length;
   pilotos = pilotos.filter(p => p.id !== id);
   salvarEstado();
   return pilotos.length < antes;
 }
-
-// ============================================================
-// FRONT-END
-// ============================================================
 
 const form        = document.getElementById("form");
 const lista       = document.getElementById("lista");
@@ -58,7 +46,6 @@ function mostrarMensagem(texto, tipo = "sucesso") {
   setTimeout(() => { mensagemEl.textContent = ""; mensagemEl.className = ""; }, 3000);
 }
 
-// Classe da medalha por posição
 function medalClass(index) {
   return ["medal-1","medal-2","medal-3"][index] || "medal-n";
 }
