@@ -12,9 +12,6 @@ body {
   padding: 30px 16px;
 }
 
-/* =====================
-   HEADER
-===================== */
 .header {
   display: flex;
   align-items: center;
@@ -51,9 +48,6 @@ body {
   margin-top: 2px;
 }
 
-/* =====================
-   FORMULÁRIO
-===================== */
 .form-card {
   background: #fff;
   border: 1px solid #e0e0e0;
@@ -143,9 +137,6 @@ button:hover {
   color: #555;
 }
 
-/* =====================
-   FEEDBACK
-===================== */
 #mensagem {
   max-width: 700px;
   margin: 0 auto 10px;
@@ -170,17 +161,11 @@ button:hover {
   letter-spacing: 0.07em;
 }
 
-/* =====================
-   LISTA
-===================== */
 #lista {
   max-width: 700px;
   margin: 0 auto;
 }
 
-/* =====================
-   CARDS
-===================== */
 .card {
   background: #fff;
   border: 1px solid #e8e8e8;
@@ -221,7 +206,6 @@ button:hover {
 .medal-3 { background: #F5C4B3; color: #4A1B0C; }
 .medal-n { background: #f4f4f4; color: #888; }
 
-/* Info do piloto */
 .info {
   flex: 1;
   text-align: left;
@@ -243,7 +227,6 @@ button:hover {
   margin-top: 2px;
 }
 
-/* Barra de pontos */
 .pts-bar-wrap {
   flex: 1;
   display: flex;
@@ -275,7 +258,6 @@ button:hover {
   text-align: right;
 }
 
-/* Botões de ação nos cards */
 .acoes {
   display: flex;
   gap: 6px;
@@ -311,7 +293,6 @@ button:hover {
   color: #E24B4A;
 }
 
-/* Mensagem vazia */
 .vazio {
   text-align: center;
   color: #bbb;
@@ -319,9 +300,6 @@ button:hover {
   padding: 36px 0;
 }
 
-/* =====================
-   RESPONSIVO
-===================== */
 @media (max-width: 500px) {
   .pts-bar-wrap { display: none; }
   .piloto-detalhe { display: none; }
