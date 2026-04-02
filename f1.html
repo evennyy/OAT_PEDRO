@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 Ranking CRUD</title>
+  <link rel="stylesheet" href="f1.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+           stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v5"/>
+        <circle cx="18" cy="17" r="3"/>
+        <circle cx="7" cy="17" r="3"/>
+        <path d="M14 17h-4"/>
+      </svg>
+    </div>
+    <div>
+      <h1>Ranking Fórmula 1</h1>
+      <p>Classificação de pilotos — temporada atual</p>
+    </div>
+  </div>
+
+  <!-- FORMULÁRIO -->
+  <div class="form-card">
+    <div class="form-title">Adicionar / editar piloto</div>
+    <form id="form">
+      <input type="hidden" id="id">
+      <div class="form-row">
+        <input type="text" id="nome" placeholder="Nome do piloto" required>
+        <input type="text" id="equipe" placeholder="Equipe" required>
+        <input type="number" id="pontos" placeholder="Pontos" min="0" required>
+      </div>
+      <div class="form-actions">
+        <button type="submit" id="btn-salvar">Salvar</button>
+        <button type="button" id="btn-cancelar" onclick="cancelarEdicao()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- FEEDBACK -->
+  <div id="mensagem"></div>
+
+  <!-- LISTA -->
+  <div class="section-label">Classificação</div>
+  <div id="lista"></div>
+
+  <script src="f1.js"></script>
+</body>
+</html>

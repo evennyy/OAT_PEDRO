@@ -1,0 +1,328 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #111;
+  min-height: 100vh;
+  padding: 30px 16px;
+}
+
+/* =====================
+   HEADER
+===================== */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.header-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #E24B4A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.header h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+}
+
+.header p {
+  font-size: 0.82rem;
+  color: #777;
+  margin-top: 2px;
+}
+
+/* =====================
+   FORMULÁRIO
+===================== */
+.form-card {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 18px;
+  margin: 0 auto 24px;
+  max-width: 700px;
+}
+
+.form-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-bottom: 12px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 120px;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  color: #111;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.form-row input:focus {
+  border-color: #E24B4A;
+  background: #fff;
+}
+
+.form-row input::placeholder {
+  color: #bbb;
+}
+
+.form-row input[type="number"] {
+  max-width: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+button {
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background: #f0f0f0;
+  color: #333;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+button:hover {
+  background: #e4e4e4;
+}
+
+#btn-salvar {
+  background: #E24B4A;
+  color: #fff;
+  border-color: #E24B4A;
+}
+
+#btn-salvar:hover {
+  background: #A32D2D;
+  border-color: #A32D2D;
+}
+
+#btn-cancelar {
+  display: none;
+  background: #f0f0f0;
+  color: #555;
+}
+
+/* =====================
+   FEEDBACK
+===================== */
+#mensagem {
+  max-width: 700px;
+  margin: 0 auto 10px;
+  min-height: 22px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+#mensagem.sucesso { color: #2e7d32; }
+#mensagem.erro    { color: #c62828; }
+
+/* =====================
+   SEÇÃO CLASSIFICAÇÃO
+===================== */
+.section-label {
+  max-width: 700px;
+  margin: 0 auto 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+/* =====================
+   LISTA
+===================== */
+#lista {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* =====================
+   CARDS
+===================== */
+.card {
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 13px 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: border-color 0.2s;
+}
+
+.card:first-child {
+  border-color: #E24B4A;
+  border-width: 1.5px;
+}
+
+.card.editando {
+  border-color: #BA7517;
+  border-width: 1.5px;
+}
+
+/* Medalha de posição */
+.medal {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.medal-1 { background: #FAEEDA; color: #633806; }
+.medal-2 { background: #e8e8e8; color: #444; }
+.medal-3 { background: #F5C4B3; color: #4A1B0C; }
+.medal-n { background: #f4f4f4; color: #888; }
+
+/* Info do piloto */
+.info {
+  flex: 1;
+  text-align: left;
+  min-width: 0;
+}
+
+.piloto-nome {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.piloto-detalhe {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* Barra de pontos */
+.pts-bar-wrap {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 80px;
+}
+
+.pts-bar-bg {
+  flex: 1;
+  height: 4px;
+  background: #f0f0f0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.pts-bar {
+  height: 100%;
+  background: #E24B4A;
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.pts-value {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #333;
+  min-width: 54px;
+  text-align: right;
+}
+
+/* Botões de ação nos cards */
+.acoes {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btn-editar,
+.btn-excluir {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  background: transparent;
+  color: #999;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.btn-editar:hover {
+  background: #E6F1FB;
+  border-color: #378ADD;
+  color: #185FA5;
+}
+
+.btn-excluir:hover {
+  background: #FCEBEB;
+  border-color: #E24B4A;
+  color: #E24B4A;
+}
+
+/* Mensagem vazia */
+.vazio {
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9rem;
+  padding: 36px 0;
+}
+
+/* =====================
+   RESPONSIVO
+===================== */
+@media (max-width: 500px) {
+  .pts-bar-wrap { display: none; }
+  .piloto-detalhe { display: none; }
+}
